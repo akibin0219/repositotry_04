@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+<link rel="stylesheet" href="css/style.css">
+<title>ex_bxslider.html</title>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>
+<script src="js/lightbox.js"></script>
+
+<script>
+    $(function(){
+  $('.bxslider').bxSlider({
+      mode: "fade",
+      speed: "1000",
+  });
+});
+
+    $(function(){
+      // ▼マウスが載ったらサブメニューを表示
+      $("ul.main_menu li").mouseenter(function(){
+         $(this).siblings().find("ul").hide();  // 兄弟要素に含まれるサブメニューを全部消す。
+         $(this).children().slideDown(150);     // 自分のサブメニューを表示する。
+      });
+      // ▼どこかがクリックされたらサブメニューを消す
+      $('html').click(function() {
+         $('ul.main_menu ul').slideUp(150);
+      });
+   });
+</script>
+<script>
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+    if ( $(window).scrollTop() > amountScrolled ) {
+        $('a.sf-back-to-top').fadeIn('slow');
+    } else {
+        $('a.sf-back-to-top').fadeOut('slow');
+    }
+});
+
+$('a.sf-back-to-top').click(function() {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 700);
+    return false;
+});
+
+</script>
+
+
+
+</head>
+
+<body>
+    <a href="#" class="sf-back-to-top"><span class="arrow"></span>Topへ</a>
+<div id="container">
+    <header>
+        <img src="images/logo.gif">
+    </header>
+<!-- スクロール横画像 -->
+    <div class="topimage">
+            <ul class="bxslider">
+                  <li><img src="images/TopPhoto.jpg" /></li>
+                  <li><img src="images/mejiro.jpg" /></li>
+                  <li><img src="images/yachou.jpg" /></li>
+             </ul>
+    </div>
+
+
+<!-- ▼メニューを構成するHTML -->
+    <nav>
+<ul class="main_menu">
+   <li><a href="#">春の野鳥</a>
+    <ul>
+         <li><a href="#">メジロ　　　</a>
+            <ul>
+               <li><a href="#">生態</a></li>
+               <li><a href="#">写真</a></li>
+                    <li><a href="#">観察場所、日時</a></li>
+            </ul>
+         </li>
+         <li><a href="#">ヒバリ</a>
+                <ul>
+               <li><a href="#">生態</a></li>
+               <li><a href="#">写真</a></li>
+                    <li><a href="#">観察場所、日時</a></li>
+            </ul>
+            </li>
+         <li><a href="#">ツバメ</a>
+                <ul>
+               <li><a href="#">生態</a></li>
+               <li><a href="#">写真</a></li>
+                    <li><a href="#">観察場所、日時</a></li>
+            </ul>
+            </li>
+      </ul>
+
+    </li>
+   <li><a href="#">夏の野鳥</a>
+      <ul>
+         <li><a href="#">オオヨシキリ</a>
+            <ul>
+               <li><a href="#">生態</a></li>
+               <li><a href="#">写真</a></li>
+                    <li><a href="#">観察場所、日時</a></li>
+            </ul>
+         </li>
+         <li><a href="#">アオバズク</a>
+                <ul>
+               <li><a href="#">生態</a></li>
+               <li><a href="#">写真</a></li>
+                    <li><a href="#">観察場所、日時</a></li>
+            </ul>
+            </li>
+         <li><a href="#">カワセミ</a>
+                <ul>
+               <li><a href="#">生態</a></li>
+               <li><a href="#">写真</a></li>
+                    <li><a href="#">観察場所、日時</a></li>
+            </ul>
+            </li>
+      </ul>
+   </li>
+   <li><a href="#">秋の野鳥</a>
+      <ul>
+         <li><a href="#">カワラヒワ</a>
+            <ul>
+               <li><a href="#">生態</a></li>
+               <li><a href="#">写真</a></li>
+                    <li><a href="#">観察場所、日時</a></li>
+            </ul>
+         </li>
+         <li><a href="#">モズ</a>
+                <ul>
+               <li><a href="#">生態</a></li>
+               <li><a href="#">写真</a></li>
+                    <li><a href="#">観察場所、日時</a></li>
+            </ul>
+            </li>
+         <li><a href="#">ジョウビタキ</a>
+                <ul>
+               <li><a href="#">生態</a></li>
+               <li><a href="#">写真</a></li>
+                    <li><a href="#">観察場所、日時</a></li>
+            </ul>
+            </li>
+            <li><a href="#">コゲラ</a>
+                <ul>
+               <li><a href="#">生態</a></li>
+               <li><a href="#">写真</a></li>
+                    <li><a href="#">観察場所、日時</a></li>
+            </ul>
+            </li>
+      </ul>
+   </li>
+   <li><a href="#">冬の野鳥</a>
+      <ul>
+         <li><a href="#">シジュウカラ</a>
+            <ul>
+               <li><a href="#">生態</a></li>
+               <li><a href="#">写真</a></li>
+                    <li><a href="#">観察場所、日時</a></li>
+            </ul>
+         </li>
+         <li><a href="#">ルリビタキ</a>
+                <ul>
+               <li><a href="#">生態</a></li>
+               <li><a href="#">写真</a></li>
+                    <li><a href="#">観察場所、日時</a></li>
+            </ul>
+            </li>
+          <li><a href="#">ノスリ</a>
+                <ul>
+               <li><a href="#">生態</a></li>
+               <li><a href="#">写真</a></li>
+                    <li><a href="#">観察場所、日時</a></li>
+            </ul>
+            </li>
+      </ul>
+   </li>
+
+</ul>
+    </nav>
+
+<!--ギャラリー-->
+    <section id="gallery">
+        <div class="bird_photo">
+            <a href="images/m_photo_oyosikiri.jpg" rel="lightbox"><img src="images/m_photo_oyosikiri.jpg" alt="">
+            </a>
+        </div>
+
+        <div class="bird_photo">
+            <a href="images/m_photo_goisagi.jpg" rel="lightbox">
+            <img src="images/m_photo_goisagi.jpg" alt="">
+            </a>
+        </div>
+
+        <div class="bird_photo">
+            <a href="images/m_photo_ikaru.jpg" rel="lightbox">
+            <img src="images/m_photo_ikaru.jpg" alt="">
+            </a>
+        </div>
+
+        <div class="bird_photo">
+            <a href="images/m_photo_joubitaki.jpg" rel="lightbox">
+            <img src="images/m_photo_joubitaki.jpg" alt="">
+            </a>
+        </div>
+
+    </section>
+
+<!-- News -->
+    <article>
+            <h1>News</h1>
+            <section>
+                <h2>2016年6月3日　セキレイがベランダに巣を作っていた</h2>
+                <p>久しぶりにベランダから外を眺めていると、足元に見慣れない木くずや小枝があるのに気づきました。そのままにしておくと、数時 間後セキレイが来て巣作りを始めました。何度も行き来してせっせと小枝を運んできます。オスなのかメスなのか、1羽なのか2羽な のかもわかりません。こんな街中のマンションでも巣を作るんですね。</p>
+            </section>
+            <section>
+                <h2>2016年1月15日　二丁目のウメの花が開花　メジロが数羽</h2>
+                <p>二丁目の民家宅庭先のウメの花が咲きました。通勤途中で見かけました。少し見ているとメジロが数羽ですが来ていました。もうす ぐ春。サクラが咲くころになるとメジロたちは群れになって花のある木から木へと移動します。一時の消滅危惧から今は個体数も回 復しているようです。</p>
+            </section>
+            <section>
+                <h2>2013年11月3日　三丁目公園でモズ</h2>
+                <p>11月３日の朝、散歩の途中で三丁目公園の松の木の上でモズが鳴いていました。あたりの木の中で１番高いところに陣取り、周囲 を威嚇するように鳴いていました。同じ場所では去年の冬にもモズがみられました。同じ個体が冬に戻ってきて、同じテリトリーで過 ごしているようにも見えます。</p>
+            </section>
+            <section>
+                <h2>2012年5月3日　カルガモが植木の中に巣をつくった</h2>
+                <p>公園西の街のマンション2階の植え込みの中でカルガモが巣を作りヒナをかえしました。昨日知り合いから知らせがあり見てきまし た。植え込みの近くの池にヒナを連れて行こうとしていましたが、人が見に来ていて躊躇しているようでした。ただ残念ながらこの池 には水はわずかしかありません。餌もないのでヒナを育てるには不十分です。このカルガモのヒナたち、無事に巣立ちができるどう か不安です。</p>
+            </section>
+        </article>
+
+</div>
+</body>
+</html>

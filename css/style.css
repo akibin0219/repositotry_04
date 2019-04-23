@@ -1,0 +1,144 @@
+/* lighttboox css stylesheeet */
+
+
+#container {
+        width: 80%;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+    }
+/* メニューバーの装飾 */
+    nav {
+		  width: 100%;
+	 }
+	ul.main_menu {
+			margin-top: 0;               /* メニューバー外側の余白(ゼロ) */
+   		padding: 0; /* メニューバー内側の余白(左に15px) */
+   		background-color: f00; /* バーの背景色(濃い赤色) */
+	}
+	ul.main_menu li {
+   		width: 25%;          /* メニュー項目の横幅(125px) */
+			float: left; /* ★横並びに配置する */
+			list-style-type: none; /* ★リストの先頭記号を消す */
+			position: relative;    /* ★サブメニュー表示の基準位置にする */
+	}
+
+	ul.main_menu a {
+			background-color: #f00; /* メニュー項目の背景色(濃い赤色) */
+			color: #fff;              /* メニュー項目の文字色(白色) */
+			line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
+			text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
+			text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+			font-weight: bold;         /* 太字にする */
+			display: block;            /* ★項目内全域をリンク可能にする */
+	}
+	ul.main_menu a:hover {
+			background-color: #fdd; /* メニュー項目にマウスが載ったときの背景色(淡いピンク) */
+			color: #d00;            /* メニュー項目にマウスが載ったときの文字色(濃い赤色) */
+	}
+
+/* サブメニュー項目の装飾 */
+	ul.main_menu ul {
+			margin: 0px;        /* ★サブメニュー外側の余白(ゼロ) */
+			padding: 0px;       /* ★サブメニュー内側の余白(ゼロ) */
+			display: none;      /* ★標準では非表示にする */
+			position: absolute; /* ★絶対配置にする */
+	}
+	ul.main_menu ul li {
+			width: 100%;               /* サブメニュー1項目の横幅() */
+			border-top: 1px solid pink; /* 項目上側の枠線(ピンク色で1pxの実線) */
+	}
+	ul.main_menu ul li a {
+			line-height: 35px;   /* サブメニュー1項目の高さ(35px) */
+			text-align: left;    /* 文字列の配置(左寄せ) */
+			padding-left: 5px;   /* 文字列前方の余白(5px) */
+			font-weight: normal; /* 太字にはしない */
+	}
+	ul.main_menu ul li a:hover {
+			background-color: #ffff80; /* サブメニュー項目にマウスが載ったときの背景色(淡い黄色) */
+			color: #005500;            /* サブメニュー項目にマウスが載ったときの文字色(濃い緑色) */
+	}
+/* 孫メニュー項目の装飾 */
+	ul.main_menu ul ul {
+		width: 100%;
+			margin: 0px;        /* ★サブメニュー外側の余白(ゼロ) */
+			padding: 0px;       /* ★サブメニュー内側の余白(ゼロ) */
+			display: none;      /* ★標準では非表示にする */
+			position: absolute; /* ★絶対配置にする */
+			top: -1px;          /* 1pxだけ上方向にずらす(※上に1pxの枠線を引いている場合) */
+			left: 100%;         /* ★基準位置からの距離を親ボックスの幅100％にする */
+			border-left: 1px solid pink; /* 左側に引く枠線(ピンク色で1pxの実線) */
+	}
+/* GalleryのCSS設定 */
+#gallery {
+	width: 100%;
+	padding-top: 40px;
+	overflow: hidden;
+}
+.bird_photo {
+	width: 22%;
+	float: left;
+	padding-left: 4%;
+}
+.bird_photo:first-of-type {
+	padding-left: 0;
+}
+.bird_photo img {
+	width: 100%;
+}
+/* NewsのCSS設定 */
+    article h1 {
+        font-size: 1.4em;
+        font-weight: bold;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #000;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    article section {
+        margin: 30px 0 40px 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #000;
+    }
+    article section h2 {
+        font-size: 0.9em;
+    }
+    article section p {
+        margin-top: 10px;
+        font-size: 0.8em;
+        line-height: 1.2em;
+    }
+
+
+/* back-to-topのCSS設定 */
+.sf-back-to-top {
+    background-color: #50A1CB; /* button color */
+    color: white; /* text/arrow color */ 
+    display: none;
+    z-index: 999;
+    /* float in bottom right corner */
+    /* 20 pixels from edge */
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    /* size of button is 50 pixels*/
+    width: 50px;
+    height: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    /* round button */
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+a.sf-back-to-top {
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.6;
+    padding-left: 2px;
+    padding-top: 15px;    
+}
+
